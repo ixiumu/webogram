@@ -573,3 +573,11 @@ function versionCompare (ver1, ver2) {
     search: search
   }
 })(window)
+
+function changeServer () {
+  var server_host = prompt('', window.localStorage.server_host || '*.web.telegram.org');
+  if(server_host != null){
+    window.localStorage.server_host = server_host
+  }
+  return false
+}
